@@ -160,6 +160,7 @@ table1 <- spread(mean_piaac_oecd, educ, oecd_mean) %>%
   mutate(sex = ifelse(sex==1, "Men", "Women")) %>%
   arrange(sex)
 
+dir.create("Output")
 write.csv(table1, "Output/table1.csv", row.names=FALSE)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------
